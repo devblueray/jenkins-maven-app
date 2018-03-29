@@ -12,6 +12,9 @@ pipeline {
 				sh 'mvn -B -D skipTests clean package'
 			}
 		}
+		stage('Deliver') {
+			sh './jenkins/scripts/deliver.sh'
+		}
 	}
 }
 
