@@ -18,6 +18,7 @@ pipeline {
 			}
 			post {
 				always {
+					echo ${WORKSPACE}
 					junit 'target/surefire-reports/*.xml'
 				}
 			}
