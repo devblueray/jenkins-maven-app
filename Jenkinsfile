@@ -28,9 +28,6 @@ pipeline {
 				sh './jenkins/scripts/deliver.sh'
 			}
 		}
-		stage('Build Container') {
-			sh 'docker build -t devblueray/maven-test:latest .'
-		}
 	}
 	
 }
