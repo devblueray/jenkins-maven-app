@@ -15,8 +15,8 @@ pipeline {
 		stage('Test') {
 			steps {
 				sh 'mvn test'
-				}
-			}
+			      }
+			
 			post {
 				always {
 					junit 'target/surefire-reports/*.xml'
@@ -28,8 +28,10 @@ pipeline {
 				sh './jenkins/scripts/deliver.sh'
 			}
 		}
-		stage('Build Container')
+		stage('Build Container') {
 			sh 'docker build -t devblueray/maven-test:latest .'
+		}
 	}
+	
 }
 
