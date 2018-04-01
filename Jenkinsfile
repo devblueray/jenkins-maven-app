@@ -30,7 +30,7 @@ pipeline {
 		}
 		stage("Docker") {
 			steps {
-			sh 'docker build -t devblueray/maven-tutorial:v1'
+			sh 'docker build -t devblueray/maven-tutorial:v1 .'
 			}
 		}
 	}
