@@ -10,7 +10,7 @@ pipeline {
 		stage('Build') {
 			steps {
 				sh 'mvn -B -D skipTests clean package'
- 				sh 'echo $WORKSPACE'
+ 				sh 'echo ${env.WORKSPACE}'
 			}
 		}
 		stage('Test') {
