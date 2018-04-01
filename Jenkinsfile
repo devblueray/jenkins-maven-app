@@ -32,7 +32,7 @@ pipeline {
 			steps {
 				dir $WORKSPACE
 				sh 'docker build -t devblueray/maven-tutorial:v1 .'
-'
+
 			}
 		}
 	}
