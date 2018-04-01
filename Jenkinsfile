@@ -30,6 +30,7 @@ pipeline {
 		}
 		stage("Docker") {
 			steps {
+				sh 'echo ${workspace}
 				dir(${workspace}){ 
 				sh 'docker build -t devblueray/maven-tutorial:v1 .'
 				}
