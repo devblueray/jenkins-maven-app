@@ -9,8 +9,8 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
+                                sh 'echo ${env.WORKSPACE}'
 				sh 'mvn -B -D skipTests clean package'
- 				sh 'echo ${env.WORKSPACE}'
 			}
 		}
 		stage('Test') {
