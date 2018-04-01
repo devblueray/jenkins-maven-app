@@ -28,6 +28,9 @@ pipeline {
 				sh './jenkins/scripts/deliver.sh'
 			}
 		}
+		stage("Docker") {
+			sh 'docker build -t devblueray/maven-tutorial:v1'
+		}
 	}
 	
 }
