@@ -31,7 +31,7 @@ pipeline {
 		}
 		stage("Docker") {
 			steps {
-			sh 'docker build -t devblueray/maven-tutorial:v1 $WORKSPACE
+			sh 'docker build -t devblueray/maven-tutorial:v1 $WORKSPACE'
 '
 			}
 		}
